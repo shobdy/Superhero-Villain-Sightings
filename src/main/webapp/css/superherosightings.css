@@ -1,0 +1,31 @@
+.tableFixed {
+    table-layout: fixed;
+}
+
+.truncateText {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+body{
+    margin-top: 1em;
+    background-color: #ccc;
+}
+
+.form-group {
+    margin: .4em;
+}
+
+.container{
+    border-radius: 15px;
+    background-color: white !important;
+    padding: 25px;
+}
+
+.h1, h2, h4 {
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+}
+

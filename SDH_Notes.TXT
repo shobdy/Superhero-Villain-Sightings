@@ -1,0 +1,50 @@
+ONGOING ISSUES______________________________________________________________________
+2019-02-01 3:31PM CST - Everything seems to be working OK. Need to make it more pleasing to the eye now.
+
+
+
+
+COMPLETED ISSUES_____________________________________________________________________
+
+2019-01-16 - Future option. Factor out the PersonOrganization create and edit in the PersonController to new method at the bottom to clean up code.
+    2019-01-18 - Completed and tested, works fine.
+2019-01-19 8:30AM CST - Figure out how to make the create column appear on top when screens are smaller.
+    2019-01-18 8:50AM CST - Done - Learned new feature in Bootstrap. Pull col you want on top first in code, then add to class something like 'col-md-push-6'. 
+    Then add similar code to other column like 'col-md-pull-6'. This pushes the top code to the right and pulls bottom code to the left.
+2019-01-18 9:30AM CST - Added hr between each create and list columns to help differentiate and it hides an col-md and col-lg. Works fine.
+    Used the classes hidden-md and hidden-lg
+2019-01-18 10:00AM - Add back button to all screens that need it. Used js to have it go back.
+    Create button and set onclick="goBack()". Added link to new js I created - <script src="${pageContext.request.contextPath}/js/SHSightingsScripts.js"></script>
+    Added this to js file: function goBack(){window.history.back();}
+    Modified the layout to have back button on left and Update on right by adding to the update button class 'pull-right'.
+2019-01-19 2:20PM CST - Move logout from the old spot to top right corner.
+    2019-01-20 5:30PM CST - Moved the logout to the top right corner on the same line as the h1 title. Had to convert the h1 to a span class="h1" and add class to the h4 to 'pull-right'.
+2019-01-20 5:30PM CST - Trying to get the favicon.ico to work for all webpages. This is icon in title bar of browser.
+    Asked on slack after research didn't help. I think the issue is in the Spring MVC setup that SWG has us use.
+    2019-01-21 3:00PM CST - Worked with Austyin Hill for a while and finally think I have it beat. Looks like the app wasn't liking the .ico I created. 
+        I create a .png version and linked to it. Seems to have worked. Having Austyn test also when she gets back.
+        Austyn checked and said it worked fine for her.
+2019-01-24 4:58PM CST - Trying to add checkbox to let user know what users are disabled. and can enable/disable with just a click. Use JS for that.
+    2019-01-28 1:01AMP CST - Had too much of a time with it. I have the table saying Yes/NO for the enabled and admin.
+        In the edit page, I have it there where you can enable and set as admin. Tested Fine.
+2019-01-21 12:24PM CST - Add an edit to the user to be able to change name and password without having to delete and recreate.
+    Having a hell of a time getting the authorities list populated. Left off in the display part of UserController.
+    2019-01-27 4:38PM CST - Finally got the Edit page working. Need to get the Update Password Page working.
+    2019-01-28 1:28PM CST - Got edit and password pages working.
+2019-01-24 3:57PM CST - Need to figure out if I can check for existing user and send message through annotation.
+    2019-01-28 3:00PM CST - I am proud of this one. In UserController, I created an if statement that checks users for existing username, then pass:
+        result.rejectValue("username", "DuplicateUser", "Duplicate user, please select another username.");
+        This line creates the error message and puts in result to go to the next part that tests for errors. Works great!
+2019-01-18 11:00AM CST - Need to figure out how to dynamically limit text length depending on screen size for description field.
+    Been trying to do it with javascript. It works but you have to manually refresh every time you change screen size.
+    Need to research how to trigger the function. Maybe window.onresize and/or window.onload? is there one for screen rotate?
+    2019-01-31 8:53AM CST - After asking for help on slack, I finally got an answer I could use. 
+        Phil Williams pointed me to an article that does it the way I wanted using only css.
+        I added to my code and it worked great. Put the code snippet in my evernote file.
+2019-01-21 2:45PM CST - Add a login link to top right of the app on home tab, Person list page and Person Details page. The rest are blocked by security.
+    2019-01-21 4:30PM CST - added the login link and it works except it redirects to home page instead of page you were on when you clicked it.
+        Need to see if I can figure out the redirect later.
+    2019-02-01 3:09PM CST - Made it to where if you log in or log out, it will take you to the home tab every time. 
+        Figured it was a good compromise for now.
+
+
